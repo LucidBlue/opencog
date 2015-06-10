@@ -41,5 +41,9 @@ ENDIF (HAVE_SERVER)
 # build unconditionally; a check is made there.
 ADD_SUBDIRECTORY (embodiment)
 
+#Brad's changes
+
+ADD_SUBDIRECTORY ($ENV{ROS_EMBODIMENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}/ros-embodiment)
+
 # Graphics and visualization subsystems
 ADD_SUBDIRECTORY (visualization)
