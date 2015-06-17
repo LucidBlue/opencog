@@ -282,6 +282,21 @@ ELSE (MOSES_FOUND)
 ENDIF (MOSES_FOUND)
 
 
+
+# ROS needed for minecraft embodiment...
+FIND_PACKAGE(ROS)
+
+IF (ROS_FOUND)
+	MESSAGE(STATUS "ROS was found.")
+	ADD_DEFINITIONS(-DHAVE_ROS)
+	SET(HAVE_ROS 1)
+ELSE (ROS_FOUND)
+	MESSAGE(STATUS "ROS missing: needed for embodiment.")
+ENDIF (ROS_FOUND)
+
+
+
+
 # OpenGL needed for visualization...
 FIND_PACKAGE(OpenGL)
 
